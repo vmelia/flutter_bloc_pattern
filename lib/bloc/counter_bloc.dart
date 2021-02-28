@@ -7,8 +7,10 @@ part 'counter_event.dart';
 part 'counter_state.dart';
 
 class CounterBloc extends Bloc<CounterEvent, CounterState> {
-  @override
-  CounterState get initialState => CounterState(counter: 0);
+  CounterBloc(CounterState initialState) : super(initialState);
+
+  // @override
+  // CounterState get initialState => CounterState(counter: 0);
 
   @override
   Stream<CounterState> mapEventToState(

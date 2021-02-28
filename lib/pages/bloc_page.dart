@@ -8,7 +8,7 @@ class BlocPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Bloc Page'), centerTitle: true),
       body: BlocBuilder(
-          bloc: BlocProvider.of<CounterBloc>(context),
+          cubit: BlocProvider.of<CounterBloc>(context),
           builder: (BuildContext context, state) {
             return Center(
               child: Column(

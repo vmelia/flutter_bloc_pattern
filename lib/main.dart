@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       ),
       home: BlocProvider(
           create: (BuildContext context) {
-            return CounterBloc();
+            return CounterBloc(CounterState(counter: 0));
           },
           child: BlocPage()),
     );
