@@ -1,6 +1,9 @@
 part of 'counter_bloc.dart';
 
-@immutable
-abstract class CounterState {}
+class CounterState extends Equatable {
+  final int counter;
+  CounterState({this.counter});
 
-class CounterInitial extends CounterState {}
+  @override
+  List<Object> get props => [counter];
+}
