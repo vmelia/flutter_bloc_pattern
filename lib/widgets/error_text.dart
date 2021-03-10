@@ -7,8 +7,9 @@ class ErrorText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Center(
+    return Center(
+      child: InkWell(
+        onTap: onTap,
         child: Container(
           child: Text(message,
               textAlign: TextAlign.center,

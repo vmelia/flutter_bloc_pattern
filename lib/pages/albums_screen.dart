@@ -38,7 +38,7 @@ class _AlbumsScreenState extends State<AlbumsScreen> {
     return BlocBuilder<AlbumsBloc, AlbumsState>(
       builder: (BuildContext context, AlbumsState state) {
         if (state is AlbumsListError) {
-          return ErrorText(message: '${state.error.message}\nTap to Retry');
+          return ErrorText(message: '${state.error.message}\nTap to Retry', onTap: _loadAlbums);
         }
         if (state is AlbumsLoaded) {
           return _list(state.albums);
